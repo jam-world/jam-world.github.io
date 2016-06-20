@@ -8,6 +8,7 @@ markdown: kramdown
 disqus: jamworld
 google_analytics: jamworld
 title: jamworld
+resume: asd123
 
 defaults:
   -
