@@ -1,137 +1,335 @@
-# Jekyll-Mono
+# HMFAYSAL OMEGA THEME
 
-**Jekyll-Mono** is a simple and elegant GitHub Profile cum Blog theme based on Barry Clark's [Jekyll-Now](https://github.com/barryclark/jekyll-now). It's a result of my attempt to learn **Jekyll** and create a minimalistic theme to put up my CV alongwith some blog posts.
+Project name:	HMFAYSAL OMEGA THEME  
+Author:	Hossain Mohd Faysal  
+Project type:	The Coolest Theme for Jekyll 
+License:	MIT License 
+  
+HMFAYSAL OMEGA is a minimalist, beautiful, responsive theme for Jekyll designed for engineers as well as writers who want their content to take front and center. This theme elegantly wraps each page and post with featured images complementing the content. It was built -- by Engineer slash Mathematician [Hossain Mohd Faysal](http://alum.mit.edu/www/hmfaysal/).
 
-It is crafted with 💙 by [Akshay Agarwal](https://github.com/AkshayAgarwal007).
+The theme features:
 
-![Jekyll-Mono Home Page](/images/ss.png)
+* Twitter Bootstrap 3
+* Option to set featured image that wraps your post in header and footer
+* Custom Javascript to emphasize the first paragraph `p:first-child` of your post
+* Variable templates for articles, quotation, video, photo and status updates (post types)
+* Display Equations via Native MathJax Support
+* Plugin-free/Github Pages Deployment Ready
+* Read time Calculator: Calculation of post read-time based on word count (Via Liquid Tags instead of a plugin)
+* Complex pagination script if you decide to turn pagination on
+* CSS3 transitions for better performance 
+* Ability to turn of animations in _config.yml
+* Readable typography to make your words shine
+* Disqus comments if you choose to enable
+* Simple and clear permalink structure
+* Footer Menu
+* SVG graphics
+* Google Fonts
+* 361 Fontawesome icons
+* Tags for [Open Graph](https://developers.facebook.com/docs/opengraph/) and [Twitter Cards](https://dev.twitter.com/docs/cards) for a better social sharing experience
+* Beautifully crafted [404 page](http://hmfaysal.github.io/hmfaysal-omega-theme/404.html)
+* Custom [categories](http://hmfaysal.github.io/hmfaysal-omega-theme/categories/) and [tags](http://hmfaysal.github.io/hmfaysal-omega-theme/tags/) pages for viewers pleasure
+* Stylesheets for Pygments and Coderay to make your code examples look snazzy
+* Simple search that overlays results based on post title
+* Sitemap for search engines
+* Designed by an Electrical Engineer
 
+For a full list of features, visit [this link](http://hmfaysal.github.io/hmfaysal-omega-theme/theme-setup/about-hmfaysal-omega/)
 
-## What is Jekyll?
+![screenshot of HMFAYSAL OMEGA Theme](https://raw.github.com/hmfaysal/hmfaysal-omega-theme/gh-pages/images/hmfaysal-omega-preview.jpg)
 
-It is a static site generator. It takes your content written in Markdown, passes it through your templates and spits it out as a complete static website, ready to be served using GitHub pages for free.
-Because your entire blog is static it serves and perform faster. It consumes less web resources namely memory and I/O.
+## Basic Setup for new Jekyll site
 
-## Getting Started
-
-Let's quickly set up your new blog in a matter of minutes.
-
-### Fork this repository
-
-Hit the “Fork” button in the top-right corner of the repository to fork a copy of this theme to your GitHub account and rename it to **yourusername.github.io** and then visit https://yourusername.github.io and you'll be able to see your newly created blog using Jekyll-Mono.
-
-### Customise Jekyll-Mono
-
-So now your blog is live with its default settings. Let's customise it now.
-
-Edit the _config.yml and enter your site name and description. You can easily turn on Google Analytics tracking, Disqus commenting and cool loking social icons here too.
-
-Jekyll-Mono also comes with the option of setting up the color scheme of your blog. You can do this by editing _variables.scss that lies inside the _sass folder. You can change the main theme color by simply replacing the current hex color value of `$mono` with the one of your choice. A few main theme sample colors are included in there as comments. Apart from the main theme color you can also change the header link color, navbar hover color, hyperlink color as well as the color of the various headings.
-
-A look at the customisations you can do with _variable.scss
-
-```
-// Main theme colors 
-// Some cool main theme colors(violet:#8476ad;blue:#5cacee;red:#ff7373,#ff6f69;green:#6acf64,#2ddbb3;orange:#ffa268)
-
-$mono-color:#8476ad;                // main theme color(header, links, footer icons, buttons, post-title)
-$hl-color: $darkGray;              // header link color (author name and posted on date) for blog post meta 
-$navbar-hover-color:$gray;        // navbar hover color (site name and navbar links hover color)
-$link-color: $darkerGray;        // normal hyperlink color other than the ones above.
-
-
-// Heading colors
-// You can play around with these too!
-$h1-color: $mono-color;
-$h2-color: $mono-color; 
-$h3-color: $darkerGray; 
-$h4-color: $gray;
-``` 
-Have a look at Jekyll-Mono with four different main theme colors.
- 
-![Jekyll Mono in 4 different colors](/images/ss-color.png)
-
-Finally you need to set up your avatar. Pick up your avatar, resize it to 220x220px simply using paint or any editor of your choice and upload it to the images folder. Now open _variables.scss, you'll see something like this `$avatar: "/images/avatar.jpg";`. Here change the avatar.jpg to what you have uploaded just now.
+1. [Install Jekyll](http://jekyllrb.com) and read through [this installation instructions](http://hmfaysal.github.io/hmfaysal-omega-theme/theme-setup/installing-jekyll-on-windows/) if you haven't already.
+2. Fork the [HMFAYSAL OMEGA Theme](https://github.com/hmfaysal/hmfaysal-omega-theme/fork)
+3. Clone the repo you just forked.
+4. Edit `_config.yml` to personalize your site.
+5. Check out the sample posts in `_posts` to see examples for pulling in large feature images, assigning categories and tags, and other YAML data.
+6. Read the documentation below for further customization pointers and documentation.
 
 
-### Start Blogging
+**Pro-tip:** Delete the `gh-pages` branch after cloning and start fresh by branching off `master`. There is a bunch of garbage in `gh-pages` used for the theme's demo site that I'm guessing you don't want on your site.
 
-Publish your first blog post by editing /_posts/2016-03-06-Eternal-Lorem-Ipsum.md. [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) might come in handy while writing your blog posts in Markdown. If you are not comfortable with writing in Markdown you can use [Prose](http://prose.io/) for writing your blog posts. [This](https://developmentseed.org/blog/2012/june/25/prose-a-content-editor-for-github/s) will help you in setting up prose.
-
-![Post](/images/post.PNG)
-
-To create a post just click on create new file button in /_posts/. Create a new file with the following naming convention: **year-month-day-title.md**. Also make sure to include the front-matter at the top of each new blog post.
-
-You can see the front matter at the top of /_posts/2016-03-06-Eternal-Lorem-Ipsum.md. It looks something like this. You have to change the title and author according to your post. The layout will remain the same.
-
-```
---- 
-layout: post
-title: The Eternal Lorem Ipsum Placeholder Text Here
-author: Author Name
 ---
 
+## Setup for Existing Jekyll site
+
+1. Clone the following folders: `_includes`, `_layouts`, `plugins`, `assets`, and `images`.
+2. Clone the following files and personalize content as need: `about.md`, `technical-details.md`, `theme-setup.md`, `index.html`, `categories.html`, `tags.html`, `feed.xml`, and `sitemap.xml`.
+3. Set the following variables in your `_config.yml` file:
+
+``` yaml
+title:            Site Title
+description:      Site description for the metas.
+logo:             site-logo.png
+disqus_shortname: shortname
+# Assign a default image for your site's header and footer
+default_bg:       some-image.jpg
+search:           true
+share:            true
+# Read Time is a calculator tp provide post read-time based on word count. Usage is recommended.
+readtime:         true
+# Turn on or off the fin animations in the header and footer
+animated_fins:    true
+# Specify the fin color in RGB value
+fin_color:        "255,255,255"
+# Change url to your domain. Leave localhost server or blank when working locally.
+url:              "http://localhost:4000"
+
+
+# Owner/author information
+owner:
+  name:           Your Name
+  avatar:         your-photo.jpg
+  email:          your@email.com
+  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
+  description:	  Some Details about yourself
+  # Social networking links used in footer. Update and remove as you like.
+  # To register at HMFAYSAL SOCIAL, visit http://social.hmfaysal.tk
+  twitter:
+  facebook:
+  github:
+  linkedin:
+  instagram:
+  tumblr:
+  hmfaysalsocial:
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:    "http://plus.google.com/123123123123132123"
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: Home
+    url: /
+    external: false
+    icon: home
+  - title: <i class="icon-book"></i> Documentation
+    url: /documentation
+  - title: Categories
+    url: /categories
+  - title: Tags
+    url: /tags
+  - title: Faysal who?
+    url: /hossain-mohd-faysal
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      true
+pygments:    true
+markdown:    kramdown
+paginate:    6
+paginate_path: "page:num"
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+  coderay:
+    coderay_line_numbers: 
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
 ```
 
-### About and Projects Page
+---
 
-In the parent folder you'll find about.md and projects.md. These are templates for helping you to set up your biodata/CV and projects that will be available at yourusername.github.io/about and yourusername.github.io/projects respectively. Again you can edit it in Markdown on GitHub or using Prose as per your choice.
+## Post Front Matter YAML
 
+HMFAYSAL OMEGA uses variable post templates for articles, quotation, video, photo and status updates. 
 
-## Demo
+A new blog post should have the following structure to utilise the themes functions
 
-You can see the live demo of this theme at http://akshayagarwal007.github.io/Jekyll-Mono/
+``` yaml
+---
+layout: post
+title: "Some Title"					# Title of the post
+description: Some description		# Description of the post, used for Facebook Opengraph & Twitter
+headline: Some headline				# Will appear in bold letters on top of the post
+modified: YYYY-MM-DD				# Date
+category: personal
+tags: []
+image: 
+  feature: some-image.jpg
+comments: true
+mathjax:
+---
+```
 
-## Local Development
+A new status should have the following structure to utilise the themes functions
 
-For setting up your development environment you can follow the official Jekyll [Documentation](https://jekyllrb.com/docs/installation/). It's a little bit complicated for Windows users. Let's see how it's done on windows:
+``` yaml
+---
+layout: post
+type: status                # ! Important
+title: "Some Title"         # Title of the post
+description: Some description   # Description of the post, used for Facebook Opengraph & Twitter
+headline: Some headline       # Will appear in bold letters on top of the post
+modified: YYYY-MM-DD        # Date
+category: personal
+tags: []
+image: 
+  feature: some-image.jpg
+comments: true
+mathjax:
+---
+```
 
-1. **Install Chocolatey**. **[Chocolatey](https://chocolatey.org)** is a package manager for windows. It's awesome. 
-   Open a command propmt with administrator access. Paste this. Hit Enter and restart the command prompt.
-   
-   ```
-   @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
-   
-   ```
+A new quotation post should have the following structure to utilise the themes functions
 
-2. **Install Ruby** : In your command prompt type `choco install ruby -y`.
- Hit Enter. After installation restart the cmd with administrator privileges.
+``` yaml
+---
+layout: post
+type:  quote                # ! Important
+title: "Some Title"         # Title of the post
+description: Some description   # Description of the post, used for Facebook Opengraph & Twitter
+headline: Some headline       # Will appear in bold letters on top of the post
+modified: YYYY-MM-DD        # Date
+category: personal
+tags: []
+image: 
+  feature: some-image.jpg
+comments: true
+mathjax:
+---
+```
 
-3. **Install Jekyll/Sass (plug-ins used by GitHub Pages)**: `gem install github-pages`
+A new video post should have the following structure to utilise the themes functions
 
-4. **Clone your fork of Jekyll-Mono** `git clone https://github.com/yourusername/yourusername.github.io.git`
+``` yaml
+---
+layout: post
+type:  video                # ! Important
+title: "Some Title"         # Title of the post
+description: Some description   # Description of the post, used for Facebook Opengraph & Twitter
+headline: Some headline       # Will appear in bold letters on top of the post
+modified: YYYY-MM-DD        # Date
+category: personal
+tags: []
+image: 
+  feature: some-image.jpg
+comments: true
+mathjax:
+---
+```
 
-5. **Serve the site** by `jekyll serve`. It regenerates itself after any changes has been made.
+A new photo post should have the following structure to utilise the themes functions. By default, the featured image is shown on the blog index, but if you want to display another photo, you can choose to do so :)
 
-6. **View your site** at http://127.0.0.1:4000/
+``` yaml
+---
+layout: post
+type:  photo                # ! Important
+photo: some-image.jpg 		# In case you do not want the featured image to display on the front page
+title: "Some Title"         # Title of the post
+description: Some description   # Description of the post, used for Facebook Opengraph & Twitter
+headline: Some headline       # Will appear in bold letters on top of the post
+modified: YYYY-MM-DD        # Date
+category: personal
+tags: []
+image: 
+  feature: some-image2.jpg
+comments: true
+mathjax:
+---
+```
 
-7. If you make any changes to _config.yml you'll need to rebuild the site using `jekyll build` and then again a `jekyll serve` to serve it. You'll need to do a rebuild only if you want to see the changes locally, else you can simply commit your changes and push them to your GitHub repo, GitHub pages will rebuild and serve your website.
+---
 
-## Credits
+## Folder Structure
+``` bash
+HMFAYSAL-OMEGA-THEME
+│
+│
+├───assets
+│   ├───css
+│   │       bootstrap.css
+│   │       style.css
+│   │
+│   ├───font
+│   │       fontawesome─webfont.svg
+│   │       fontawesome─webfontd41d.eot
+│   │       fontawesome─webfontf77b.eot
+│   │       fontawesome─webfontf77b.ttf
+│   │       fontawesome─webfontf77b.woff
+│   │
+│   ├───fonts
+│   │   ├───glyphicons─halflings─regular.eot
+│   │   │       index.html
+│   │   │
+│   │   ├───glyphicons─halflings─regular.svg
+│   │   │       index.html
+│   │   │
+│   │   ├───glyphicons─halflings─regular.ttf
+│   │   │       index.html
+│   │   │
+│   │   └───glyphicons─halflings─regular.woff
+│   │           index.html
+│   │
+│   └───js
+│       │   script.js
+│       │   scripts.min.js
+│       │   waypoints.min.js
+│       │   _main.js
+│       │
+│       ├───plugins
+│       │       jquery.fitvids.js
+│       │       jquery.magnific─popup.js
+│       │       simpleJekyllSearch.js
+│       │
+│       └───vendor
+│               jquery─1.9.1.min.js
+│
+├───images
+│
+├───_includes
+│       browser─upgrade.html
+│       disqus_comments.html
+│       footer.html
+│       head.html
+│       header.html
+│       scripts.html
+│       signoff.html
+│
+├───_layouts
+│       home.html
+│       page.html
+│       post.html
+│
+└───_posts
+```
 
-* [Barry Clark](https://github.com/barryclark) for creating [Jekyll-Now](https://github.com/barryclark/jekyll-now) on which this theme is based.
-* [Manoela Ilic](https://github.com/crnacura) of Codrops for writing awesome articles on web design.
-* [David Miller](https://github.com/davidtmiller) of Blackrock Digital for making awesome open source themes.
-* [Jekyll](https://github.com/jekyll/jekyll) - Thanks to its creator and contributors.
-* [Font-Awesome](http://fontawesome.io) - Thanks to its creator and contributors.
+---
 
-## Contributing
+## Questions?
 
-* Found a bug? Report it on GitHub [Issues](https://github.com/AkshayAgarwal007/Jekyll-Mono/issues) and include a code sample.
-* [Fork](https://github.com/AkshayAgarwal007/Jekyll-Mono/fork) the repository and start your own blog using it and let me know about it so that I can include a reference to it here. Probably the best way you can contribute :)
-* If you find anything that's wrong or want to talk to me about anything related to this theme or want to contribute in any way, please feel free to [mail me](mailto:agarwal.akshay.akshay8@gmail.com).
+Having a problem getting something to work or want to know why I setup something in a certain way? Ping me on Twitter [@hmfaysal](http://twitter.com/hmfaysal) or [file a GitHub Issue](https://github.com/hmfaysal/hmfaysal-omega-theme/issues/new).
+
+---
+
+## Requests?
+
+If you have some specific requests for this theme, or if you need help custom coding some elements, message me on Twitter [@hmfaysal](http://twitter.com/hmfaysal) or email me at [hmfaysal@alum.mit.edu](mailto:hmfaysal@alum.mit.edu)
+
+---
 
 ## License
 
-Jekyll-Mono is licensed under [MIT](https://github.com/AkshayAgarwal007/Jekyll-Mono/blob/master/LICENSE.txt).
+This theme is free and open source software, distributed under the [The MIT License](LICENSE). So feel free to use this Jekyll theme on your site without linking back to me or using a disclaimer.
+
+If you'd like to give me credit somewhere on your blog or tweet a shout out to [@hmfaysal](https://twitter.com/hmfaysal), that would be pretty sweet.
 
 
-
-
-
-
-
-
-
-
-  
+Warm Regards and Stay Creative,  
+Hossain Mohd. Faysal
