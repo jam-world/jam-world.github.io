@@ -14,9 +14,9 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: dbyll
+      title: Jamworld's HomePage
 
-description: Stylish Jekyll Theme
+description: Jamworld's Personal HomePage
 author:
   name: Jamworld
   email: jamworld@uchicago.edu
