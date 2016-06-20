@@ -9,7 +9,7 @@
 title: Jamworld's HomePage
 email: jamworld@uchicago.edu
 description: > # this means to ignore newlines until "baseurl:"
-Never Give up, Never End!
+  Never Give Up, Never End!!
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: cha_chen
