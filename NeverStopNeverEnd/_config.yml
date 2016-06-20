@@ -19,5 +19,3 @@ github_username: jam-world
 
 # Build settings
 markdown: kramdown
-
-destination: /Users/chencha/myGitRepo/jam-world.github.io
