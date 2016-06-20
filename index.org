@@ -1,6 +1,0 @@
-#+TITLE: My HomePage
-#+AUTHOR: Cha Chen
-* Introduction
-I am now a master of computer science student in the University of Chicago. And I am now doing a research intern in the TTIC with respect to robot navigation. My personal interests is in the strong artificial intelligence, especially related to the singularity.
-* Current Project
-I am now working on a project to translate the nature language into the robot instructions with respect to the surrounding environments. 
