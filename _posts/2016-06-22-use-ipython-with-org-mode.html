@@ -1,0 +1,66 @@
+---
+date: 2016-06-22
+tags: 
+- org
+author: jamworld
+layout: post
+title: Use ipython with org-mode
+excerpt: Fantastic experience, combine org-mode with ipython
+categories: 
+- study
+---
+
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">Combine IPython with babel</h2>
+<div class="outline-text-2" id="text-orgheadline1">
+<p>
+I just finish experiment to combine the ipython with the babel in the org-mode. It was the most fantastic tool that I have ever used. Here are some examples.
+</p>
+</div>
+
+<div id="outline-container-orgheadline2" class="outline-3">
+<h3 id="orgheadline2">import all matplotlib and numpy</h3>
+<div class="outline-text-3" id="text-orgheadline2">
+<div class="org-src-container">
+
+<pre class="src src-ipython">%matplotlib inline
+<span style="color: #4f97d7; font-weight: bold;">import</span> matplotlib.pyplot <span style="color: #4f97d7; font-weight: bold;">as</span> plt
+<span style="color: #4f97d7; font-weight: bold;">import</span> numpy <span style="color: #4f97d7; font-weight: bold;">as</span> np
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgheadline3" class="outline-3">
+<h3 id="orgheadline3">Use numpy to do some calculation</h3>
+<div class="outline-text-3" id="text-orgheadline3">
+<div class="org-src-container">
+
+<pre class="src src-ipython"><span style="color: #4f97d7;">[</span>x <span style="color: #4f97d7; font-weight: bold;">for</span> x <span style="color: #4f97d7; font-weight: bold;">in</span> <span style="color: #4f97d7;">range</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">10</span><span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">]</span>
+</pre>
+</div>
+
+<pre class="example">
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-orgheadline4" class="outline-3">
+<h3 id="orgheadline4">Draw some picture with matplotlib</h3>
+<div class="outline-text-3" id="text-orgheadline4">
+<div class="org-src-container">
+
+<pre class="src src-ipython">plt.hist<span style="color: #4f97d7;">(</span>np.random.randn<span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">20000</span><span style="color: #bc6ec5;">)</span>, bins=<span style="color: #a45bad;">200</span><span style="color: #4f97d7;">)</span>
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="../img/ipython-test.png" alt="ipython-test.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
