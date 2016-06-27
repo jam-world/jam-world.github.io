@@ -1,0 +1,91 @@
+---
+date: 2016-06-27
+tags: 
+- theano
+- nerual
+author: jamworld
+layout: post
+title: What is Theano
+excerpt: Discuss some of my thoughts on what is theano
+categories: 
+- study
+---
+
+<div id="outline-container-orgheadline5" class="outline-2">
+<h2 id="orgheadline5">What is Theano?</h2>
+<div class="outline-text-2" id="text-orgheadline5">
+</div><div id="outline-container-orgheadline1" class="outline-3">
+<h3 id="orgheadline1">Shortest way</h3>
+<div class="outline-text-3" id="text-orgheadline1">
+<p>
+Theano is an python library for tensor computation.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline2" class="outline-3">
+<h3 id="orgheadline2">Goal</h3>
+<div class="outline-text-3" id="text-orgheadline2">
+<p>
+Easy to write and high performance.
+</p>
+</div>
+<ul class="org-ul"><li><a id="orgheadline3"></a>Easy to write and understand<br  /><div class="outline-text-4" id="text-orgheadline3">
+<p>
+Means that we can write down a symbolic <b>acyclic</b> graph model for the computation. The computation graph is easy for the human beings to understand.
+</p>
+</div></li>
+<li><a id="orgheadline4"></a>High performance<br  /><div class="outline-text-4" id="text-orgheadline4">
+<p>
+Theano will compile the given computation graph into the high performance C code or CUDA code.
+</p>
+</div></li></ul>
+</div>
+</div>
+<div id="outline-container-orgheadline10" class="outline-2">
+<h2 id="orgheadline10">Some details about Theano</h2>
+<div class="outline-text-2" id="text-orgheadline10">
+</div><div id="outline-container-orgheadline6" class="outline-3">
+<h3 id="orgheadline6">Graph Structure</h3>
+<div class="outline-text-3" id="text-orgheadline6">
+<p>
+Two kinds of nodes
+</p>
+</div>
+<ul class="org-ul"><li><a id="orgheadline7"></a>Variable Nodes<br  /><div class="outline-text-4" id="text-orgheadline7">
+<p>
+Represent data, usually tensor.
+</p>
+</div></li>
+<li><a id="orgheadline8"></a>Apply Nodes<br  /><div class="outline-text-4" id="text-orgheadline8">
+<p>
+Represent the application of mathematical operations.
+</p>
+</div></li></ul>
+</div>
+<div id="outline-container-orgheadline9" class="outline-3">
+<h3 id="orgheadline9">Variable Type System</h3>
+</div>
+</div>
+
+<div id="outline-container-orgheadline13" class="outline-2">
+<h2 id="orgheadline13"><b>NOTE</b></h2>
+<div class="outline-text-2" id="text-orgheadline13">
+</div><ul class="org-ul"><li><a id="orgheadline11"></a>Theano is quite similar to the Spark.<br  /><div class="outline-text-4" id="text-orgheadline11">
+<p>
+In the sense of the computation graph to the high performance executable code. The reason we need something like theano and spark is that it is too difficult for us humans to understand the complex machine code for the complex computation. So as what we have done the mathematics we what more abstraction. So the direction we towards is just more and more high level abstraction. What we want is just high recursion. We what something that can auto-execute the instruction once we describe the base situation and the induction step. 
+</p>
+</div></li>
+<li><a id="orgheadline12"></a>Symbolic Differentiation<br  /><div class="outline-text-4" id="text-orgheadline12">
+<p>
+In order to 
+</p>
+</div></li></ul>
+</div>
+<div id="outline-container-orgheadline14" class="outline-2">
+<h2 id="orgheadline14">References</h2>
+<div class="outline-text-2" id="text-orgheadline14">
+<p>
+<a href="http://arxiv.org/pdf/1605.02688v1.pdf">Technique-Report-For-Theano.pdf</a>
+</p>
+</div>
+</div>
