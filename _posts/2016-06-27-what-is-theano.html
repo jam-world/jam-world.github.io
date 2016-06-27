@@ -41,26 +41,26 @@ Theano will compile the given computation graph into the high performance C code
 </div></li></ul>
 </div>
 </div>
-<div id="outline-container-orgheadline9" class="outline-2">
-<h2 id="orgheadline9">Some details about Theano</h2>
-<div class="outline-text-2" id="text-orgheadline9">
+<div id="outline-container-orgheadline12" class="outline-2">
+<h2 id="orgheadline12">Some details about Theano</h2>
+<div class="outline-text-2" id="text-orgheadline12">
 </div><div id="outline-container-orgheadline6" class="outline-3">
 <h3 id="orgheadline6">Graph Structure</h3>
 <div class="outline-text-3" id="text-orgheadline6">
 <p>
 Two kinds of nodes
 </p>
-<ul class="org-ul">
-<li>[Variable Nodes] Represent data, usually tensor. (Input of many Op, Output of at most <b>one</b> Op &rarr; SSA for compiler optimization)</li>
-<li>[Apply Nodes] Represent the application of mathematical operations.</li>
-</ul>
+<dl class="org-dl">
+<dt>Variable Nodes</dt><dd>Represent data, usually tensor. (Input of many Op, Output of at most <b>one</b> Op &rarr; SSA for compiler optimization)</dd>
+<dt>Apply Nodes</dt><dd>Represent the application of mathematical operations.</dd>
+</dl>
 <p>
 In theano we organize the graph as 
 </p>
-<ul class="org-ul">
-<li>[arcs] variable</li>
-<li>[nodes] operators</li>
-</ul>
+<dl class="org-dl">
+<dt>arcs</dt><dd>variable</dd>
+<dt>nodes</dt><dd>operators</dd>
+</dl>
 </div>
 </div>
 <div id="outline-container-orgheadline7" class="outline-3">
@@ -69,12 +69,12 @@ In theano we organize the graph as
 <p>
 In order to keep the data consistent for the low level implementation there is an type system for the theano library.
 </p>
-<ul class="org-ul">
-<li>[TensorType] Type for every n-dimension array</li>
-<li>[CudaNdarrayType] Type for n-dimension cuda array</li>
-<li>[GpuArrayType] More general gpu type</li>
-<li>[Sparse] Sparse Matrix</li>
-</ul>
+<dl class="org-dl">
+<dt>TensorType</dt><dd>Type for every n-dimension array</dd>
+<dt>CudaNdarrayType</dt><dd>Type for n-dimension cuda array</dd>
+<dt>GpuArrayType</dt><dd>More general gpu type</dd>
+<dt>Sparse</dt><dd>Sparse Matrix</dd>
+</dl>
 </div>
 <ul class="org-ul"><li><a id="orgheadline8"></a><b>broadcastable pattern</b><br  /><div class="outline-text-4" id="text-orgheadline8">
 <p>
@@ -82,25 +82,43 @@ Indicate which dimension will be guaranteed to have dimension 1, thus we can bro
 </p>
 </div></li></ul>
 </div>
+<div id="outline-container-orgheadline9" class="outline-3">
+<h3 id="orgheadline9">Clone</h3>
+<div class="outline-text-3" id="text-orgheadline9">
+<p>
+By cloning the graph we can build new graph from existing graph.
+</p>
 </div>
-
-<div id="outline-container-orgheadline12" class="outline-2">
-<h2 id="orgheadline12"><b>NOTE</b></h2>
-<div class="outline-text-2" id="text-orgheadline12">
-</div><ul class="org-ul"><li><a id="orgheadline10"></a>Theano is quite similar to the Spark.<br  /><div class="outline-text-4" id="text-orgheadline10">
+</div>
+<div id="outline-container-orgheadline10" class="outline-3">
+<h3 id="orgheadline10">Operator</h3>
+<div class="outline-text-3" id="text-orgheadline10">
+<p>
+In order to implement the back propagation method. We need the reverse operator (R-Op)
+</p>
+</div>
+<ul class="org-ul"><li><a id="orgheadline11"></a>R-Operator (Symbolic Differentiation)<br  /><div class="outline-text-4" id="text-orgheadline11">
+<p>
+With chain rule, we can make differentiation in a recursion form.
+</p>
+<dl class="org-dl">
+<dt>grad method</dt><dd>Every apply nodes should have the grad method which is the</dd>
+</dl>
+</div></li></ul>
+</div>
+</div>
+<div id="outline-container-orgheadline14" class="outline-2">
+<h2 id="orgheadline14"><b>NOTE</b></h2>
+<div class="outline-text-2" id="text-orgheadline14">
+</div><ul class="org-ul"><li><a id="orgheadline13"></a>Theano is quite similar to the Spark.<br  /><div class="outline-text-4" id="text-orgheadline13">
 <p>
 In the sense of the computation graph to the high performance executable code. The reason we need something like theano and spark is that it is too difficult for us humans to understand the complex machine code for the complex computation. So as what we have done the mathematics we what more abstraction. So the direction we towards is just more and more high level abstraction. What we want is just high recursion. We what something that can auto-execute the instruction once we describe the base situation and the induction step. 
 </p>
-</div></li>
-<li><a id="orgheadline11"></a>Symbolic Differentiation<br  /><div class="outline-text-4" id="text-orgheadline11">
-<p>
-In order to 
-</p>
 </div></li></ul>
 </div>
-<div id="outline-container-orgheadline13" class="outline-2">
-<h2 id="orgheadline13">References</h2>
-<div class="outline-text-2" id="text-orgheadline13">
+<div id="outline-container-orgheadline15" class="outline-2">
+<h2 id="orgheadline15">References</h2>
+<div class="outline-text-2" id="text-orgheadline15">
 <p>
 <a href="http://arxiv.org/pdf/1605.02688v1.pdf">Technique-Report-For-Theano.pdf</a>
 </p>
