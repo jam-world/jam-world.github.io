@@ -41,49 +41,66 @@ Theano will compile the given computation graph into the high performance C code
 </div></li></ul>
 </div>
 </div>
-<div id="outline-container-orgheadline10" class="outline-2">
-<h2 id="orgheadline10">Some details about Theano</h2>
-<div class="outline-text-2" id="text-orgheadline10">
+<div id="outline-container-orgheadline9" class="outline-2">
+<h2 id="orgheadline9">Some details about Theano</h2>
+<div class="outline-text-2" id="text-orgheadline9">
 </div><div id="outline-container-orgheadline6" class="outline-3">
 <h3 id="orgheadline6">Graph Structure</h3>
 <div class="outline-text-3" id="text-orgheadline6">
 <p>
 Two kinds of nodes
 </p>
-</div>
-<ul class="org-ul"><li><a id="orgheadline7"></a>Variable Nodes<br  /><div class="outline-text-4" id="text-orgheadline7">
+<ul class="org-ul">
+<li>[Variable Nodes] Represent data, usually tensor. (Input of many Op, Output of at most <b>one</b> Op &rarr; SSA for compiler optimization)</li>
+<li>[Apply Nodes] Represent the application of mathematical operations.</li>
+</ul>
 <p>
-Represent data, usually tensor.
+In theano we organize the graph as 
 </p>
-</div></li>
-<li><a id="orgheadline8"></a>Apply Nodes<br  /><div class="outline-text-4" id="text-orgheadline8">
+<ul class="org-ul">
+<li>[arcs] variable</li>
+<li>[nodes] operators</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7">Variable Type System</h3>
+<div class="outline-text-3" id="text-orgheadline7">
 <p>
-Represent the application of mathematical operations.
+In order to keep the data consistent for the low level implementation there is an type system for the theano library.
+</p>
+<ul class="org-ul">
+<li>[TensorType] Type for every n-dimension array</li>
+<li>[CudaNdarrayType] Type for n-dimension cuda array</li>
+<li>[GpuArrayType] More general gpu type</li>
+<li>[Sparse] Sparse Matrix</li>
+</ul>
+</div>
+<ul class="org-ul"><li><a id="orgheadline8"></a><b>broadcastable pattern</b><br  /><div class="outline-text-4" id="text-orgheadline8">
+<p>
+Indicate which dimension will be guaranteed to have dimension 1, thus we can broadcast on it. Also used for the memory layout.
 </p>
 </div></li></ul>
 </div>
-<div id="outline-container-orgheadline9" class="outline-3">
-<h3 id="orgheadline9">Variable Type System</h3>
-</div>
 </div>
 
-<div id="outline-container-orgheadline13" class="outline-2">
-<h2 id="orgheadline13"><b>NOTE</b></h2>
-<div class="outline-text-2" id="text-orgheadline13">
-</div><ul class="org-ul"><li><a id="orgheadline11"></a>Theano is quite similar to the Spark.<br  /><div class="outline-text-4" id="text-orgheadline11">
+<div id="outline-container-orgheadline12" class="outline-2">
+<h2 id="orgheadline12"><b>NOTE</b></h2>
+<div class="outline-text-2" id="text-orgheadline12">
+</div><ul class="org-ul"><li><a id="orgheadline10"></a>Theano is quite similar to the Spark.<br  /><div class="outline-text-4" id="text-orgheadline10">
 <p>
 In the sense of the computation graph to the high performance executable code. The reason we need something like theano and spark is that it is too difficult for us humans to understand the complex machine code for the complex computation. So as what we have done the mathematics we what more abstraction. So the direction we towards is just more and more high level abstraction. What we want is just high recursion. We what something that can auto-execute the instruction once we describe the base situation and the induction step. 
 </p>
 </div></li>
-<li><a id="orgheadline12"></a>Symbolic Differentiation<br  /><div class="outline-text-4" id="text-orgheadline12">
+<li><a id="orgheadline11"></a>Symbolic Differentiation<br  /><div class="outline-text-4" id="text-orgheadline11">
 <p>
 In order to 
 </p>
 </div></li></ul>
 </div>
-<div id="outline-container-orgheadline14" class="outline-2">
-<h2 id="orgheadline14">References</h2>
-<div class="outline-text-2" id="text-orgheadline14">
+<div id="outline-container-orgheadline13" class="outline-2">
+<h2 id="orgheadline13">References</h2>
+<div class="outline-text-2" id="text-orgheadline13">
 <p>
 <a href="http://arxiv.org/pdf/1605.02688v1.pdf">Technique-Report-For-Theano.pdf</a>
 </p>
