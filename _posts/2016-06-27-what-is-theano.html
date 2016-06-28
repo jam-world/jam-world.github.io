@@ -102,7 +102,8 @@ In order to implement the back propagation method. We need the reverse operator 
 With chain rule, we can make differentiation in a recursion form.
 </p>
 <dl class="org-dl">
-<dt>grad method</dt><dd>Every apply nodes should have the grad method which is the</dd>
+<dt>grad method</dt><dd>Every apply nodes should have the grad method. Grad method here is an method that can implement the automatic differentiation. By automatic differentiation I mean differentiation via the chain rule. What we do here is just break every formula into small piece, the we the only thing we need to do is just implement the differentiation for every single pieces, which is quite simple, than by calling the grad method one by one we can get the differentiation for the whole complex formula.</dd>
+<dt>scan</dt><dd>Since the whole graph is acyclic, hence we need some special operator for the loop. (Otherwise we will got cycle inside our graph).</dd>
 </dl>
 </div></li></ul>
 </div>
