@@ -1,0 +1,102 @@
+---
+date: 2017-01-03
+tags: 
+- summary
+author: jamworld
+layout: post
+title: Summary for 2016
+excerpt: study
+categories: 
+- study
+---
+<p>
+Here are some of my new thoughts:
+</p>
+<div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">Model that generate Models (Deeper in another sense?)</h2>
+<div class="outline-text-2" id="text-orgheadline1">
+<p>
+Continue on the idea about the hidden layer can cache the intuition, I am considering if it is possible to map the model weights to the natural language. We can get one model or detector (ex. Alexnet) that only predicts one category. And we can get another model whose input is the weights in the former model (ex. Alexnet), and the output is a word vector (ex. chair). Hence, the second model can be regarded as some kind of meta model and the prediction of the first model is based on the output of the second model, and we can also generator a special detector for every object and even the object that model have never seen before (ex. combine red and house to get a red house detector). It seems this idea may work, according to the following paper (Dynamic Filter Network: <a href="https://arxiv.org/pdf/1605.09673v2.pdf">https://arxiv.org/pdf/1605.09673v2.pdf</a>, Hypernetworks: <a href="https://arxiv.org/pdf/1609.09106.pdf">https://arxiv.org/pdf/1609.09106.pdf</a>).
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline2" class="outline-2">
+<h2 id="orgheadline2">Could we generate a language for the DNN model from communication and align it against the human language?</h2>
+<div class="outline-text-2" id="text-orgheadline2">
+<p>
+When I am doing my current research project. I just come up with an idea that if consider every human beings as a DNN model, Then what should be the hidden representation for this model? And I just realized that language itself is exactly the hidden representation for human. And the evolution of language can be considered as the procedure of synchronize the hidden representation between different models. Hence, I am curious that can we make some similar procedure to generate a language for the DNN models. Even further, can we build a map between that representation with the natural language like English. A group from Deep Mind have done some research on learning the protocol (language) by communication and cooperation. (<a href="https://arxiv.org/pdf/1605.06676v2.pdf">https://arxiv.org/pdf/1605.06676v2.pdf</a>)
+</p>
+</div>
+<div id="outline-container-orgheadline3" class="outline-3">
+<h3 id="orgheadline3">Relationship with the Unix system</h3>
+<div class="outline-text-3" id="text-orgheadline3">
+<p>
+As the Unix philosophy goes:
+</p>
+<ul class="org-ul">
+<li>Write programs that do one thing and do it well</li>
+<li>Write programs to work together</li>
+<li>Write programs to handle text streams, because that is a universal interface</li>
+</ul>
+<p>
+I would like to say:
+</p>
+<ul class="org-ul">
+<li>Every model should better do just one thing</li>
+<li>There should be some way to help the different model cooperate with others</li>
+<li>It would be great if every model can output natural language and get natural language as input</li>
+</ul>
+<p>
+Another reason for the natural language as representation is that it also make sense to humans. Hence, I don't like the End-to-End solution, which can be found in many papers. It would be better to get some kind of "Model Management" for it :), something similar to <a href="http://www.gitxiv.com/">http://www.gitxiv.com/</a> (Combine the github with arxiv, i.e. code with paper) but more advanced and unified. Anyway, I buy the idea represented by the Santa Fe Institute, The complex behavior will suddenly coming to being when you got enough simple component put together. Could the free will turns out to be some engineer wonders?
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline4" class="outline-2">
+<h2 id="orgheadline4">How to decompose the Goal (generate loss function from one another)?</h2>
+<div class="outline-text-2" id="text-orgheadline4">
+<p>
+However you train a model, you will need a Goal for that model. Some kind of the loss function. Hence, if the ultimate goal for the research is to build some kind of universal model, then we should also have a universal goal (Loss function) for that model, I prefer the idea of extending its species or better serve human beings, the latter one is better from the moral perspective. If the former argument is correct, then what goes next is how can we decompose a general loss function into some other simple loss function until we come to some base condition like object detector or something can be find in a large database. 
+</p>
+</div>
+<div id="outline-container-orgheadline5" class="outline-3">
+<h3 id="orgheadline5">RL method with natural language as hidden representation</h3>
+<div class="outline-text-3" id="text-orgheadline5">
+<p>
+Here are two questions that I want to answer. Firstly, can we build a universal representation for the loss function or the reward function? For the representation, I am considering the possibility of using the natural language (If natural language is some kind of the hidden representation). Secondly, I wonder are there some kind of the differential-able structure that is suitable to generate the new loss function. I consider that some special kind of DQN may be good for this task. As the psychology says the short-term memory for a person is only 5-9 concept, Hence the structure may be a quite simple one.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline6" class="outline-3">
+<h3 id="orgheadline6">Attention based method</h3>
+<div class="outline-text-3" id="text-orgheadline6">
+<p>
+I get another idea to fulfill the task, is to use a model (i.e. LSTM) with attention to solve an abstract problem (i.e. Navigation) in the abstract space (i.e. Generate action based on the word instead of the real world image). Then, the attention on the original instruction can be regarded as some kind of the sub-goal (i.e. chair), if the attention itself is correct.
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline7" class="outline-3">
+<h3 id="orgheadline7">Could we build something that can ask question instead on of answer it?</h3>
+<div class="outline-text-3" id="text-orgheadline7">
+<p>
+Quite straight forward from the idea of decompose a goal, Ask question to help achieve the goal. I post a question on the new ai.stackexchange.com (<a href="http://ai.stackexchange.com/questions/1953/has-anyone-thought-about-making-a-neural-network-ask-questions-instead-of-only">http://ai.stackexchange.com/questions/1953/has-anyone-thought-about-making-a-neural-network-ask-questions-instead-of-only</a>) long time ago, and I don't get any answer that I am satisfy with until now. 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgheadline8" class="outline-2">
+<h2 id="orgheadline8">The concept of time should be included in the final model</h2>
+<div class="outline-text-2" id="text-orgheadline8">
+<p>
+Time is a vital concept for human to understand the world. And time is the only dimension that is infinite and within our ability. Hence, I consider the model I want should have an ability to sense the time. For example, RL model capture the concept of time, since there are penalties on the time. 
+</p>
+</div>
+</div>
+<div id="outline-container-orgheadline9" class="outline-2">
+<h2 id="orgheadline9">Inference the name of the variable of the code on github (Structure, Inference, JSNICE)</h2>
+<div class="outline-text-2" id="text-orgheadline9">
+<p>
+Dataset for the formal proof may be quite limited. However, the dataset for the code is almost infinite. In fact, there is a group of people in ZTH tried to combine the CRF with AST of JavaScript to predict the name of the variables.  (A demo: <a href="http://jsnice.org/">http://jsnice.org/</a>, Original Paper: <a href="http://www.srl.inf.ethz.ch/papers/jsnice15.pdf">http://www.srl.inf.ethz.ch/papers/jsnice15.pdf</a>) In spired by this project, I am thinking that is it possible to use a DNN to learn the functional structure in the programs on github. I consider name as a good starting point, Since it is easy to deal with and if you can infer the variable name, You should understand the programs in some sense. And if that works, we can try to extend the model for name to the other meaningful annotations like the document and annotations for the functions. Finally, it may reach some point that generate a program according to some natural language specification (annotation) is possible. Then if we got the test for the function, which is usually easy to find, we may even generate some "seems to work" function for a given test with a generate and test loop (Similar to GAN). Well, at least it can be some plugin, suggest the name of the variables, for emacs :). Further more, Since the program and proof is quite similar, hence, maybe we can even transfer learning the structure of some specific programs to the proof system, by the way, google has put the code and dataset for the DeepMath (Auto proof) paper onto the github (<a href="https://github.com/tensorflow/deepmath">https://github.com/tensorflow/deepmath</a>).
+</p>
+</div>
+</div>
